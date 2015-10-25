@@ -6,7 +6,7 @@
 dist=`stack path --dist-dir --stack-yaml ./stack.yaml 2> /dev/null`
 
 echo -e "\033[1;36mGenerating documentation...\033[0m"
-stack haddock 2>&1 > /dev/null
+stack haddock 2> /dev/null
 
 if [ "$?" -eq "0" ]; then
   docdir=$dist/doc/html
